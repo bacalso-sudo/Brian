@@ -1,0 +1,177 @@
+/* General Styles */
+body {
+    font-family: 'Roboto', sans-serif; /* Example: Using Roboto from Google Fonts */
+    line-height: 1.7;
+    background-color: #f8f8f8;
+    color: #444;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #0056b3;
+}
+
+/* Reusable Nav List Styles */
+.nav-list {
+    display: flex;
+    justify-content: center;
+    list-style: none; /* Remove bullet points */
+    padding: 0;         /* Remove default padding */
+    margin: 0;          /* Remove default margin */
+}
+
+.nav-list li {
+    margin: 0 1.5rem;
+}
+
+/* Header Styles */
+header {
+    background-color: #fff;
+    color: #333;
+    padding: 2rem 0;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+header nav ul {
+    @extend .nav-list;    /*Using the extension*/
+}
+
+header nav ul li a {
+    color: #555;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    background-color: #007bff;
+    color: #fff;
+}
+
+/* Section Styles */
+section {
+    padding: 4rem 2rem;
+    background-color: #fff;
+    margin: 2rem 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+section h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: #333;
+    text-align: center;
+}
+
+/* Project Section Styles */
+#projects .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.project-item {
+    background-color: #f0f0f0;
+    padding: 1.5rem;
+    border-radius: 8px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.project-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer Styles */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 2rem 0;
+    border-radius: 8px;
+    margin-top: 2rem;
+}
+
+footer nav ul {
+        @extend .nav-list;   /*Using the extension*/
+}
+
+footer nav ul li a {
+    color: #ddd;
+    transition: color 0.3s ease;
+}
+
+footer nav ul li a:hover {
+    color: #fff;
+}
+
+/* Contact Button Styles */
+.contact-buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.contact-button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.contact-button:hover {
+    background-color: #0056b3;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    header {
+        padding: 1rem 0; /* Reduced header padding on smaller screens */
+    }
+
+    header h1 {
+        font-size: 2rem; /* Reduced header font size */
+    }
+
+    .nav-list li {
+        margin: 0 1rem; /* Reduced nav item margin */
+    }
+
+    section {
+        padding: 3rem 1.5rem; /* Reduced section padding */
+    }
+
+    section h2 {
+        font-size: 1.75rem; /* Reduced section title font size */
+    }
+}
+
+/* Add focus styles for accessibility */
+a:focus,
+button:focus {
+    outline: 2px solid #007bff; /* Example focus style */
+    outline-offset: 2px; /* Add a small offset for better visibility */
+}
